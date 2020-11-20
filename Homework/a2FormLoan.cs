@@ -44,9 +44,9 @@ namespace Homework
             {
                 //todo 計算利息
 
-                double total = Convert.ToDouble(money);
-                double year = Convert.ToDouble(mon)/12;
-                double Rate = Convert.ToDouble(percent) / 100;
+                double total = Convert.ToDouble(money);                 //貸款金額
+                double year = Convert.ToDouble(mon)/12;                //年
+                double Rate = Convert.ToDouble(percent) / 100;     //年利率
                 double[] moneyEachMonth;
                 double totalMonth = year * 12;//总月份
                 double minMoneyEachMonth = total / totalMonth;//每月本金

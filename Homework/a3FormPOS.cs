@@ -16,7 +16,7 @@ namespace Homework
 
         private void btnBMclk_Click(object sender, EventArgs e)
         {
-            
+            //ok
             DataGridViewRowCollection rows = dataGridView1.Rows;
             string i = rows[2].ToString ();
             int i1 = int.Parse(i);
