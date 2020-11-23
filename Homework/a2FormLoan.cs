@@ -31,15 +31,20 @@ namespace Homework
             if (decimal.TryParse(money, out money1) != true)
             {
                 MessageBox.Show("請輸入數字", "貸款金額輸入錯誤");
-                textmoney.Text = 
+                textmoney.Clear();
+                textmoney.Focus();
             }
             else if (double.TryParse(percent, out percent1) != true)
             {
                 MessageBox.Show("請輸入數字", "年利率輸入錯誤");
+                textpercent.Clear();
+                textpercent.Focus();
             }
             else if (double.TryParse(mon, out mon1) != true)
             {
                 MessageBox.Show("請輸入數字", "貸款期數輸入錯誤");
+                textmon.Clear();
+                textmon.Focus();
             }    
             else
             {
