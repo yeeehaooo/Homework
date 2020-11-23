@@ -31,6 +31,7 @@ namespace Homework
             if (decimal.TryParse(money, out money1) != true)
             {
                 MessageBox.Show("請輸入數字", "貸款金額輸入錯誤");
+                textmoney.Text = 
             }
             else if (double.TryParse(percent, out percent1) != true)
             {

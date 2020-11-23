@@ -16,7 +16,8 @@ namespace Homework
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new a0FormIndex());
+            //Application.Run(new a0FormIndex());
+            Application.Run(new a8FormCalc());
         }
     }
 }

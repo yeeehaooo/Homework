@@ -12,9 +12,11 @@ namespace Homework
 {
     public partial class a0FormIndex : Form
     {
+        
         public void btnpanel(Form myForm)  //todo 使用btnpanel方法共用Panel2設定
         {
-            splitContainer2.Panel2.Controls.Clear();
+
+            splitContainer2.Panel2.Controls.Clear();  // 清空PANEL2
             myForm.TopLevel = false;
             splitContainer2.Panel2.Controls.Add(myForm);
             myForm.Show();
@@ -32,9 +34,9 @@ namespace Homework
 
         private void btnHello_Click(object sender, EventArgs e)
         {
+
             a1FormHello myForm = new a1FormHello();//建立實體
             btnpanel(myForm);
-
         }
 
         private void btnLoan_Click(object sender, EventArgs e)

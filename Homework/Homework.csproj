@@ -61,6 +61,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="a3FormPOS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="a3FormPOS.Designer.cs">
+      <DependentUpon>a3FormPOS.cs</DependentUpon>
+    </Compile>
     <Compile Include="a6FormStudent3.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -90,12 +96,6 @@
     </Compile>
     <Compile Include="a2FormLoan.Designer.cs">
       <DependentUpon>a2FormLoan.cs</DependentUpon>
-    </Compile>
-    <Compile Include="a3FormPOS.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="a3FormPOS.Designer.cs">
-      <DependentUpon>a3FormPOS.cs</DependentUpon>
     </Compile>
     <Compile Include="a4FormStudent1.cs">
       <SubType>Form</SubType>
