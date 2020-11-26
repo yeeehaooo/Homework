@@ -29,24 +29,25 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.textMath = new System.Windows.Forms.TextBox();
+            this.btnmath1 = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.button6 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnminmax = new System.Windows.Forms.Button();
+            this.btnArr1 = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.button2 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.button13 = new System.Windows.Forms.Button();
+            this.button12 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
-            this.button12 = new System.Windows.Forms.Button();
-            this.button13 = new System.Windows.Forms.Button();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.labelresult = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -57,8 +58,8 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.textMath);
+            this.groupBox1.Controls.Add(this.btnmath1);
             this.groupBox1.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.groupBox1.Location = new System.Drawing.Point(26, 12);
             this.groupBox1.Name = "groupBox1";
@@ -67,29 +68,30 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "輸入數字：";
             // 
-            // textBox1
+            // textMath
             // 
-            this.textBox1.Location = new System.Drawing.Point(37, 34);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(146, 35);
-            this.textBox1.TabIndex = 0;
+            this.textMath.Location = new System.Drawing.Point(37, 34);
+            this.textMath.Name = "textMath";
+            this.textMath.Size = new System.Drawing.Size(146, 35);
+            this.textMath.TabIndex = 0;
             // 
-            // button1
+            // btnmath1
             // 
-            this.button1.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.button1.Location = new System.Drawing.Point(97, 75);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(86, 28);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "奇數or偶數";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnmath1.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btnmath1.Location = new System.Drawing.Point(97, 75);
+            this.btnmath1.Name = "btnmath1";
+            this.btnmath1.Size = new System.Drawing.Size(86, 28);
+            this.btnmath1.TabIndex = 1;
+            this.btnmath1.Text = "奇數or偶數";
+            this.btnmath1.UseVisualStyleBackColor = true;
+            this.btnmath1.Click += new System.EventHandler(this.btnmath1_Click);
             // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.button6);
             this.groupBox3.Controls.Add(this.button4);
-            this.groupBox3.Controls.Add(this.button5);
-            this.groupBox3.Controls.Add(this.button3);
+            this.groupBox3.Controls.Add(this.btnminmax);
+            this.groupBox3.Controls.Add(this.btnArr1);
             this.groupBox3.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.groupBox3.Location = new System.Drawing.Point(26, 129);
             this.groupBox3.Name = "groupBox3";
@@ -118,25 +120,27 @@
             this.button4.Text = "陣列aRr[]內名字最長的人";
             this.button4.UseVisualStyleBackColor = true;
             // 
-            // button5
+            // btnminmax
             // 
-            this.button5.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.button5.Location = new System.Drawing.Point(6, 64);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(208, 28);
-            this.button5.TabIndex = 1;
-            this.button5.Text = "陣列aRr[]內最大/小值";
-            this.button5.UseVisualStyleBackColor = true;
+            this.btnminmax.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btnminmax.Location = new System.Drawing.Point(6, 64);
+            this.btnminmax.Name = "btnminmax";
+            this.btnminmax.Size = new System.Drawing.Size(208, 28);
+            this.btnminmax.TabIndex = 1;
+            this.btnminmax.Text = "陣列aRr[]內最大/小值";
+            this.btnminmax.UseVisualStyleBackColor = true;
+            this.btnminmax.Click += new System.EventHandler(this.btnminmax_Click);
             // 
-            // button3
+            // btnArr1
             // 
-            this.button3.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.button3.Location = new System.Drawing.Point(6, 34);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(208, 28);
-            this.button3.TabIndex = 1;
-            this.button3.Text = "陣列aRr[]奇/偶數統計";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnArr1.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btnArr1.Location = new System.Drawing.Point(6, 34);
+            this.btnArr1.Name = "btnArr1";
+            this.btnArr1.Size = new System.Drawing.Size(208, 28);
+            this.btnArr1.TabIndex = 1;
+            this.btnArr1.Text = "陣列aRr[]奇/偶數統計";
+            this.btnArr1.UseVisualStyleBackColor = true;
+            this.btnArr1.Click += new System.EventHandler(this.btnArr1_Click);
             // 
             // groupBox2
             // 
@@ -196,6 +200,26 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "陣列aRr[]";
             // 
+            // button13
+            // 
+            this.button13.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.button13.Location = new System.Drawing.Point(6, 168);
+            this.button13.Name = "button13";
+            this.button13.Size = new System.Drawing.Size(126, 28);
+            this.button13.TabIndex = 1;
+            this.button13.Text = "LENGTH";
+            this.button13.UseVisualStyleBackColor = true;
+            // 
+            // button12
+            // 
+            this.button12.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.button12.Location = new System.Drawing.Point(6, 132);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(126, 28);
+            this.button12.TabIndex = 1;
+            this.button12.Text = "MIN";
+            this.button12.UseVisualStyleBackColor = true;
+            // 
             // button7
             // 
             this.button7.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
@@ -226,28 +250,9 @@
             this.button11.Text = "swap[int,int]";
             this.button11.UseVisualStyleBackColor = true;
             // 
-            // button12
-            // 
-            this.button12.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.button12.Location = new System.Drawing.Point(6, 132);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(126, 28);
-            this.button12.TabIndex = 1;
-            this.button12.Text = "MIN";
-            this.button12.UseVisualStyleBackColor = true;
-            // 
-            // button13
-            // 
-            this.button13.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.button13.Location = new System.Drawing.Point(6, 168);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(126, 28);
-            this.button13.TabIndex = 1;
-            this.button13.Text = "LENGTH";
-            this.button13.UseVisualStyleBackColor = true;
-            // 
             // groupBox5
             // 
+            this.groupBox5.Controls.Add(this.labelresult);
             this.groupBox5.Controls.Add(this.textBox2);
             this.groupBox5.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.groupBox5.Location = new System.Drawing.Point(417, 12);
@@ -256,6 +261,15 @@
             this.groupBox5.TabIndex = 0;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "結果：";
+            // 
+            // labelresult
+            // 
+            this.labelresult.AutoSize = true;
+            this.labelresult.Location = new System.Drawing.Point(31, 94);
+            this.labelresult.Name = "labelresult";
+            this.labelresult.Size = new System.Drawing.Size(54, 26);
+            this.labelresult.TabIndex = 1;
+            this.labelresult.Text = "結果";
             // 
             // textBox2
             // 
@@ -290,13 +304,13 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox textMath;
+        private System.Windows.Forms.Button btnmath1;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnArr1;
         private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button btnminmax;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button button10;
@@ -309,5 +323,6 @@
         private System.Windows.Forms.Button button11;
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label labelresult;
     }
 }

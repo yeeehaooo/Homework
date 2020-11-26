@@ -186,7 +186,7 @@
             this.ClientSize = new System.Drawing.Size(1819, 821);
             this.Controls.Add(this.panel1);
             this.Name = "a2FormLoan";
-            this.Text = "a2FormLoan";
+            this.Text = "利息計算";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

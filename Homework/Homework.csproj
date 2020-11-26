@@ -67,17 +67,17 @@
     <Compile Include="a3FormPOS.Designer.cs">
       <DependentUpon>a3FormPOS.cs</DependentUpon>
     </Compile>
-    <Compile Include="a6FormStudent3.cs">
+    <Compile Include="a6FormStudent.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="a6FormStudent3.Designer.cs">
-      <DependentUpon>a6FormStudent3.cs</DependentUpon>
+    <Compile Include="a6FormStudent.Designer.cs">
+      <DependentUpon>a6FormStudent.cs</DependentUpon>
     </Compile>
-    <Compile Include="a5FormStudent2.cs">
+    <Compile Include="a5FormScreen.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="a5FormStudent2.Designer.cs">
-      <DependentUpon>a5FormStudent2.cs</DependentUpon>
+    <Compile Include="a5FormScreen.Designer.cs">
+      <DependentUpon>a5FormScreen.cs</DependentUpon>
     </Compile>
     <Compile Include="a0FormIndex.cs">
       <SubType>Form</SubType>
@@ -97,12 +97,13 @@
     <Compile Include="a2FormLoan.Designer.cs">
       <DependentUpon>a2FormLoan.cs</DependentUpon>
     </Compile>
-    <Compile Include="a4FormStudent1.cs">
+    <Compile Include="a4FormGuess.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="a4FormStudent1.Designer.cs">
-      <DependentUpon>a4FormStudent1.cs</DependentUpon>
+    <Compile Include="a4FormGuess.Designer.cs">
+      <DependentUpon>a4FormGuess.cs</DependentUpon>
     </Compile>
+    <Compile Include="a6StuCls.cs" />
     <Compile Include="a7FormMath.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -129,14 +130,14 @@
     <EmbeddedResource Include="a3FormPOS.resx">
       <DependentUpon>a3FormPOS.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="a4FormStudent1.resx">
-      <DependentUpon>a4FormStudent1.cs</DependentUpon>
+    <EmbeddedResource Include="a4FormGuess.resx">
+      <DependentUpon>a4FormGuess.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="a6FormStudent3.resx">
-      <DependentUpon>a6FormStudent3.cs</DependentUpon>
+    <EmbeddedResource Include="a6FormStudent.resx">
+      <DependentUpon>a6FormStudent.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="a5FormStudent2.resx">
-      <DependentUpon>a5FormStudent2.cs</DependentUpon>
+    <EmbeddedResource Include="a5FormScreen.resx">
+      <DependentUpon>a5FormScreen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="a7FormMath.resx">
       <DependentUpon>a7FormMath.cs</DependentUpon>

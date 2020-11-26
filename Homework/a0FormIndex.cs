@@ -51,21 +51,21 @@ namespace Homework
             btnpanel(myForm);
         }
 
-        private void btnstudent1_Click(object sender, EventArgs e)
+        private void btnGuess_Click(object sender, EventArgs e)
         {
-            a4FormStudent1 myForm = new a4FormStudent1();//建立實體
+            a4FormGuess myForm = new a4FormGuess();//建立實體
             btnpanel(myForm);
         }
 
-        private void btnStudent2_Click(object sender, EventArgs e)
+        private void btnScreen_Click(object sender, EventArgs e)
         {
-            a5FormStudent2 myForm = new a5FormStudent2();//建立實體
-            btnpanel(myForm);
+            a5FormScreen myForm = new a5FormScreen();//建立實體
+            myForm.Show();
         }
 
         private void bntStSH_Click(object sender, EventArgs e)
         {
-            a6FormStudent3 myForm = new a6FormStudent3();//建立實體
+            a6FormStudent myForm = new a6FormStudent();//建立實體
             btnpanel(myForm);
         }
 
@@ -80,6 +80,12 @@ namespace Homework
         {
             a8FormCalc myForm = new a8FormCalc();//建立實體
             btnpanel(myForm);
+        }
+
+        private void butClose_Click(object sender, EventArgs e)
+        {
+            Close();
+
         }
     }
     

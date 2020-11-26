@@ -10,12 +10,17 @@ using System.Windows.Forms;
 
 namespace Homework
 {
-    public partial class a6FormStudent3 : Form
+    public partial class a5FormScreen : Form
     {
-        public a6FormStudent3()
+        public a5FormScreen()
         {
             InitializeComponent();
         }
 
+        private void a5FormScreen_Click(object sender, EventArgs e)
+        {
+            Close();
+
+        }
     }
 }

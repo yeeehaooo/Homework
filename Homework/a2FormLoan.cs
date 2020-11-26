@@ -9,7 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 namespace Homework
 {
-    public partial class a2FormLoan : Form
+    public partial class a2FormLoan : Form  //todo 高利貸  完成
+
     {
         public a2FormLoan()
         {
