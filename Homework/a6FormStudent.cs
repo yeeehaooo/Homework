@@ -225,7 +225,7 @@ namespace Homework
             dataGridView1.DataSource = studentlist;
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)   //刪除DVG整列
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)   //刪除DVG整列 OK
         {
             foreach (DataGridViewRow row in dataGridView1.SelectedRows)   
                 dataGridView1.Rows.RemoveAt(row.Index);
