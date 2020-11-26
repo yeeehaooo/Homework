@@ -20,7 +20,7 @@ namespace Homework
         private void a5FormScreen_Click(object sender, EventArgs e)
         {
             Close();
-
+            //OK
         }
     }
 }
