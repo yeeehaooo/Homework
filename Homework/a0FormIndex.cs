@@ -87,6 +87,12 @@ namespace Homework
             Close();
 
         }
+
+        private void btnOXgame_Click(object sender, EventArgs e)
+        {
+            a9FormOOXX myForm = new a9FormOOXX() ;//建立實體
+            btnpanel(myForm);
+        }
     }
     
 

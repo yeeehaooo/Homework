@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace Homework
 {
-    public partial class a6FormStudent : Form   //todo 成績單 完成
+    public partial class a6FormStudent3 : Form
     {
-        public a6FormStudent()
+        public a6FormStudent3()
         {
             InitializeComponent();
         }
@@ -170,13 +170,13 @@ namespace Homework
                      subma = "，不及格";
                 }
                 
-                labelsingle.Text = $"個人成績：\n" +
+                labelsingle.Text = $"\n查詢結果：\n" +
                                    $"姓名：{student.stuName}\n" +
                                    $"國文：{student.stuChinese}{subch}\n" +
                                    $"英文：{student.stuEnglish}{subeng}\n" +
                                    $"數學：{student.stuMath}{subma}" +
                                    $"\n平均：{Math.Round((student.stuMath + student.stuChinese + student.stuEnglish) / 3)}" +
-                                   $"\n----------------------------------\n";
+                                   $"\n------------------------------------------\n";
             }
             else
             {
@@ -185,71 +185,72 @@ namespace Homework
 
 
         }
-        public static string RamString(int length) //亂數產生 字串
-        {
-            //var str = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-            var str = "家豪志明俊傑建宏俊偉文雄金龍強女淑芬惠美玲雅婷麗華娟貞怡君諺書硯佑萱晨陳王庄李林";
-            var next = new Random();
-            var builder = new StringBuilder();
-            for (var i = 0; i < 3; i++)
-            {
-                builder.Append(str[next.Next(0, str.Length)]);
-            }
-            return builder.ToString();
-        }
-        Random random = new Random();
-        private void butrmd_Click(object sender, EventArgs e)
-        {
-            
-            
-            for (int i = 0; i <=20; i++)
-            {
-                int x = random.Next(0, 100);
-                int y = random.Next(0, 100);
-                int z = random.Next(0, 100);
-                studentlist.Add(new a6StuCls() { stuName = RamString(3), stuChinese = x, stuEnglish = y, stuMath = z });
-                dataGridView1.Refresh();
-                dataGridView1.DataSource = studentlist;
-            }
 
-        }
-
-
-        private void btn20_Click(object sender, EventArgs e)  //隨機加入資料
+        private void btn20_Click(object sender, EventArgs e)  //加入預設20筆資料
         {
-            int x = random.Next(0, 100);
-            int y = random.Next(0, 100);
-            int z = random.Next(0, 100);
-            studentlist.Add(new a6StuCls() { stuName = RamString(3), stuChinese = x, stuEnglish = y, stuMath = z });            
+            //
+            //student.stuName = textname.Text;
+            //student.stuChinese = double.Parse(textchinese.Text);
+            //student.stuEnglish = double.Parse(textenglish.Text);
+            //student.stuMath = double.Parse(textmath.Text);
+            studentlist.Add(new a6StuCls() { stuName = "AA", stuChinese = 47, stuEnglish = 88, stuMath = 100 });
+            studentlist.Add(new a6StuCls() { stuName = "BB", stuChinese = 52, stuEnglish = 75, stuMath = 70 });
+            studentlist.Add(new a6StuCls() { stuName = "CC", stuChinese = 99, stuEnglish = 97, stuMath = 60 });
+            studentlist.Add(new a6StuCls() { stuName = "DD", stuChinese = 87, stuEnglish = 49, stuMath = 50 });
+            studentlist.Add(new a6StuCls() { stuName = "EE", stuChinese = 74, stuEnglish = 52, stuMath = 43 });
+            studentlist.Add(new a6StuCls() { stuName = "FF", stuChinese = 38, stuEnglish = 66, stuMath = 98 });
+            studentlist.Add(new a6StuCls() { stuName = "GG", stuChinese = 65, stuEnglish = 77, stuMath = 45 });
+            studentlist.Add(new a6StuCls() { stuName = "HH", stuChinese = 43, stuEnglish = 88, stuMath = 78 });
+            studentlist.Add(new a6StuCls() { stuName = "II", stuChinese = 60, stuEnglish = 90, stuMath = 33 });
+            studentlist.Add(new a6StuCls() { stuName = "JJ", stuChinese = 61, stuEnglish = 100, stuMath = 100 });
+            studentlist.Add(new a6StuCls() { stuName = "KK", stuChinese = 75, stuEnglish = 30, stuMath = 66 });
+            studentlist.Add(new a6StuCls() { stuName = "LL", stuChinese = 88, stuEnglish = 28, stuMath = 75 });
+            studentlist.Add(new a6StuCls() { stuName = "MM", stuChinese = 93, stuEnglish = 37, stuMath = 90 });
+            studentlist.Add(new a6StuCls() { stuName = "NN", stuChinese = 100, stuEnglish = 66, stuMath = 88 });
+            studentlist.Add(new a6StuCls() { stuName = "OO", stuChinese = 0, stuEnglish = 60, stuMath = 99 });
+            studentlist.Add(new a6StuCls() { stuName = "PP", stuChinese = 85, stuEnglish = 70, stuMath = 78 });
+            studentlist.Add(new a6StuCls() { stuName = "QQ", stuChinese = 64, stuEnglish = 80, stuMath = 84 });
+            studentlist.Add(new a6StuCls() { stuName = "RR", stuChinese = 59, stuEnglish = 54, stuMath = 65 });
+            studentlist.Add(new a6StuCls() { stuName = "SS", stuChinese = 70, stuEnglish = 57, stuMath = 59 });
+            studentlist.Add(new a6StuCls() { stuName = "TT", stuChinese = 78, stuEnglish = 99, stuMath = 63 });
             dataGridView1.Refresh();
             dataGridView1.DataSource = studentlist;
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)   //刪除DVG整列
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            foreach (DataGridViewRow row in dataGridView1.SelectedRows)   
+
+
+            foreach (DataGridViewRow row in dataGridView1.SelectedRows)
+            {
                 dataGridView1.Rows.RemoveAt(row.Index);
+            }
+
         }//todo 選取列刪除學生資料
-        
+
         public int lbx; //todo Listbox選取索引
         private void listsubject_SelectedIndexChanged(object sender, EventArgs e)//Listbox選取索引
         {
             if (listsubject.SelectedIndex == 0)
             {
-                //MessageBox.Show("國文", "選取科目");
+                MessageBox.Show("國文", "選取科目");
                 lbx = 0;
             }
             else if (listsubject.SelectedIndex == 1)
             {
-                //MessageBox.Show("英文", "選取科目");
+                MessageBox.Show("英文", "選取科目");
                 lbx = 1;
             }
             else if (listsubject.SelectedIndex == 2)
             {
-                //MessageBox.Show("數學", "選取科目");
+                MessageBox.Show("數學", "選取科目");
                 lbx = 2;
             }
+
+
         }
+
+
         private void btnsearch1_Click(object sender, EventArgs e)  //todo 依科目搜尋X~X範圍學生成績
         {
             double z;
@@ -270,9 +271,12 @@ namespace Homework
             { 
             int lbdown = int.Parse(textdown.Text);
             int lbup = int.Parse(textup.Text);
+
             labelresult.Text = string.Empty;
             string zz = "";
             int cou = 0;
+            
+            
             switch (lbx)
             {
                 case 0:
@@ -284,8 +288,8 @@ namespace Homework
                             zz += $"姓名：{studentlist[i].stuName}，國文：{studentlist[i].stuChinese}" +
                                           //$"英文：{studentlist[i].stuEnglish}\n" +
                                           //$"數學：{studentlist[i].stuMath}" +                                   
-                                          $"\n------------------------------\n";
-                            labelresult.Text = $"查詢結果：共{cou}人\n" + zz;
+                                          $"\n------------------------------------------\n";
+                            labelresult.Text = $"\n查詢結果：共{cou}人\n" + zz;
                         }
                     }
                     break;
@@ -298,8 +302,8 @@ namespace Homework
                             zz += $"姓名：{studentlist[i].stuName}，英文：{studentlist[i].stuEnglish}" +
                                           //$"英文：{studentlist[i].stuEnglish}\n" +
                                           //$"數學：{studentlist[i].stuMath}" +                                   
-                                          $"\n------------------------------\n";
-                            labelresult.Text = $"查詢結果：共{cou}人\n" + zz;
+                                          $"\n------------------------------------------\n";
+                            labelresult.Text = $"\n查詢結果：共{cou}人\n" + zz;
                         }
                     }
                     break;
@@ -312,24 +316,35 @@ namespace Homework
                             zz += $"姓名：{studentlist[i].stuName}，數學：{studentlist[i].stuMath}" +
                                           //$"英文：{studentlist[i].stuEnglish}\n" +
                                           //$"數學：{studentlist[i].stuMath}" +                                   
-                                          $"\n------------------------------\n";
-                            labelresult.Text = $"查詢結果：共{cou}人\n" + zz;
+                                          $"\n------------------------------------------\n";
+                            labelresult.Text = $"\n查詢結果：共{cou}人\n" + zz;
                         }
                     }
                     break;
             }
+
+
+
+
         }
-        }    
+        }
+        double avgch, avgen, avgma;
+
         private void btnlie_Click(object sender, EventArgs e)
         {
             DialogResult result;
             result = MessageBox.Show("資料匯出", "確定",MessageBoxButtons.OKCancel,MessageBoxIcon.Warning);
             if (result == DialogResult.OK)
+            {
                 MessageBox.Show("這是MessageBox練習","騙你的~");
+            }
             else
+            {
                 MessageBox.Show("BINGO答對了");
+            }
+
         }
-        double avgch, avgen, avgma;
+
         int ch1, eng1, ma1;
         private void btncount_Click(object sender, EventArgs e) //todo各科平均、不及格人數
         {
@@ -339,6 +354,9 @@ namespace Homework
             string avgch1 = string.Empty;
             string avgen1 = string.Empty;
             string avgma1 = string.Empty;
+            //string sch = string.Empty;
+            //string seng = string.Empty;
+            //string sma = string.Empty;
             for (int i = 0; i < studentlist.Count; i++)
             {
                 avgch += studentlist[i].stuChinese;
@@ -352,36 +370,29 @@ namespace Homework
 
             for (int i = 0,j=0,k=0; i < studentlist.Count; i++,j++,k++)
             {
-                if (studentlist[i].stuChinese<60)                
-                    ch1 += 1;                
-                if (studentlist[i].stuEnglish < 60)                
-                    eng1 += 1;                
+                if (studentlist[i].stuChinese<60)
+                {
+                    ch1 += 1;                    
+                }
+                if (studentlist[i].stuEnglish < 60)
+                {
+                    eng1 += 1;                    
+                }
                 if (studentlist[i].stuMath < 60)
-                    ma1 += 1;                
-            }//計算各科不及格人數                        
-            var minch =studentlist.Min(t => t.stuChinese);  //todo  lambda
-            var mineng = studentlist.Min(t => t.stuEnglish);
-            var minma = studentlist.Min(t => t.stuMath);
-            var maxch = studentlist.Max(t => t.stuChinese);
-            var maxeng = studentlist.Max(t => t.stuEnglish);
-            var maxma = studentlist.Max(t => t.stuMath);
+                {
+                    ma1 += 1;                  
+                }
+
+            }//計算各科不及格人數
             //顯示結果
-            labelresult.Text = $"查詢結果：\n" +
-                               $"{avgch1}分\n" +
-                               $"{avgen1}分\n" +
-                               $"{avgma1}分" +
-                               $"\n--------------------------------\n" +
-                               $"國文： {ch1} 人不及格\n" +
-                               $"英文： {eng1} 人不及格\n" +
-                               $"數學： {ma1} 人不及格" +
-                                $"\n--------------------------------\n" +
-                                $"國文最低分：{minch}分\n" +
-                                $"英文最低分：{mineng}分\n" +
-                                $"數學最低分：{minma}分" +
-                                $"\n--------------------------------\n" +
-                                $"國文最高分：{maxch}分\n" +
-                                $"英文最高分：{maxeng}分\n" +
-                                $"數學最高分：{maxma}分";
+            labelresult.Text = $"\n查詢結果：\n" +
+                                   $"{avgch1}\n" +
+                                   $"{avgen1}\n" +
+                                   $"{avgma1}" +
+                                   $"\n------------------------------------------\n" +
+                                   $"國文： {ch1} 人不及格\n"+
+                                   $"英文： {eng1} 人不及格\n"+
+                                   $"數學： {ma1} 人不及格\n";
         }
     }
 }

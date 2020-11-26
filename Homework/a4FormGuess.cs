@@ -25,48 +25,38 @@ namespace Homework
         int x = 0;
         private void butGuess_Click(object sender, EventArgs e)
         {
-            if (textInt.Text == string.Empty)
-            {
-                MessageBox.Show("請輸入數字1~100", "錯誤");
-                textInt.Clear();
-                textInt.Focus();
-            }
-            keyIn = int.Parse(textInt.Text);
             x += 1;
             checknum = true;
-            labelresult.Text = "";            
-             
+            labelresult.Text = "";  
             int a;
 
-            if (int.TryParse(textInt.Text, out a) == false)
+            if (int.TryParse(textInt.Text, out a) == false || textInt.Text == string.Empty)
             {
-                MessageBox.Show("請輸入數字1~100", "錯誤");
+                MessageBox.Show($"請輸入數字{min}～{max}", "錯誤");
                 textInt.Clear();
                 textInt.Focus();
             }
             else
             {
-                
-                if (keyIn < min || keyIn > max)
+                if (int.Parse(textInt.Text) < min || int.Parse(textInt.Text) > max)
                 {
                     MessageBox.Show($"範圍{min}～{max}", "範圍");
                     textInt.Clear();
                     textInt.Focus();
                     checknum = !checknum;
                     labelresult.Text = $"範圍{ min}～{ max}";
-                    
                 }
-                if (keyIn == min)
+                if (int.Parse(textInt.Text) == min)
                 {
-                    MessageBox.Show($"請輸入{min + 1}～{max}", "範圍");
+                    MessageBox.Show($"請輸入{min+1}～{max}", "範圍");
                     textInt.Clear();
                     textInt.Focus();
                     checknum = !checknum;
                     labelresult.Text = $"範圍{ min}～{ max}";
                 }
-                else if (keyIn == max)
+                else if (int.Parse(textInt.Text) == max)
                 {
-                    MessageBox.Show($"請輸入{min}～{max - 1}", "範圍");
+                    MessageBox.Show($"請輸入{min}～{max-1}", "範圍");
                     textInt.Clear();
                     textInt.Focus();
                     checknum = !checknum;
@@ -74,24 +64,24 @@ namespace Homework
                 }
                     if (checknum == true)
                 {
-                    if (keyIn < number1)
+                    if (int.Parse(textInt.Text) < number1)
                     {
 
-                        labelresult.Text = $"範圍 {keyIn} ~ {max}";
-                        min = keyIn;
+                        labelresult.Text = $"範圍 {int.Parse(textInt.Text)} ~ {max}";
+                        min = int.Parse(textInt.Text);
                         textInt.Clear();
                         textInt.Focus();
 
                     }
-                    else if (keyIn > number1)
+                    else if (int.Parse(textInt.Text) > number1)
                     {
-                        labelresult.Text = $"範圍 {min} ~ {keyIn}";
-                        max = keyIn;
+                        labelresult.Text = $"範圍 {min} ~ {int.Parse(textInt.Text)}";
+                        max = int.Parse(textInt.Text);
                         textInt.Clear();
                         textInt.Focus();
 
                     }
-                    else if (keyIn == number1)
+                    else if (int.Parse(textInt.Text) == number1)
                     {
                         labelresult.Text = $"恭喜答對!!!";
                         timerTest.Enabled = true;

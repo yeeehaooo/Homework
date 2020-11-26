@@ -40,6 +40,7 @@
             this.btnGuess = new System.Windows.Forms.Button();
             this.btnpos = new System.Windows.Forms.Button();
             this.butClose = new System.Windows.Forms.Button();
+            this.btnOXgame = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
@@ -110,6 +111,7 @@
             this.splitContainer2.Panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("splitContainer2.Panel1.BackgroundImage")));
             this.splitContainer2.Panel1.Controls.Add(this.btnHello);
             this.splitContainer2.Panel1.Controls.Add(this.butClose);
+            this.splitContainer2.Panel1.Controls.Add(this.btnOXgame);
             this.splitContainer2.Panel1.Controls.Add(this.btncalc);
             this.splitContainer2.Panel1.Controls.Add(this.btnMathCal);
             this.splitContainer2.Panel1.Controls.Add(this.bntStSH);
@@ -210,6 +212,18 @@
             this.butClose.UseVisualStyleBackColor = true;
             this.butClose.Click += new System.EventHandler(this.butClose_Click);
             // 
+            // btnOXgame
+            // 
+            this.btnOXgame.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnOXgame.Location = new System.Drawing.Point(10, 250);
+            this.btnOXgame.Name = "btnOXgame";
+            this.btnOXgame.Size = new System.Drawing.Size(182, 23);
+            this.btnOXgame.TabIndex = 1;
+            this.btnOXgame.Text = "9.OX-Game";
+            this.btnOXgame.UseVisualStyleBackColor = true;
+            this.btnOXgame.Click += new System.EventHandler(this.btnOXgame_Click);
+            // 
             // a0FormIndex
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -243,6 +257,7 @@
         private System.Windows.Forms.Button btnMathCal;
         private System.Windows.Forms.Button btncalc;
         private System.Windows.Forms.Button butClose;
+        private System.Windows.Forms.Button btnOXgame;
     }
 }
 
