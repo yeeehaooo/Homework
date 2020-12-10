@@ -22,12 +22,13 @@ namespace Homework
         {
             //todo 使用int.TryParse 
             //處理 textbox 資料型態不為int 報錯處理
-            String money = textmoney.Text;
+            string money = textmoney.Text;
             decimal money1 = 0.00m;
-            String percent = textpercent.Text;
+            string percent = textpercent.Text;
             double percent1 = (double)0.00m;
-            String mon = textmon.Text;
+            string mon = textmon.Text;
             double mon1 = 0;
+            
 
             if (decimal.TryParse(money, out money1) != true)
             {
@@ -58,7 +59,7 @@ namespace Homework
                 double totalMonth = year * 12;//总月份
                 double minMoneyEachMonth = total / totalMonth;//每月本金
                 moneyEachMonth = new double[(int)totalMonth];//每月还款数组
-
+                double tl = 0;
                 int i;
                 for (i = 0; i < totalMonth; i++)
                 {
@@ -70,8 +71,10 @@ namespace Homework
                 for (i = 0; i < totalMonth; i++)
                 {
                     textotal.Text += "第" + (i + 1) + "月(本期應繳金額：" + Math.Round(moneyEachMonth[i]) +"\r\n";
+                     tl += Math.Round(moneyEachMonth[i]);
                 }
-                //'textallloan.Text= 
+                
+                textallloan.Text = (tl-total).ToString(); 
             }
         }
 

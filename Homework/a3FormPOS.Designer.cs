@@ -62,6 +62,7 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnClear = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btncancel = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -286,7 +287,7 @@
             this.btnvisa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnvisa.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btnvisa.ForeColor = System.Drawing.Color.Red;
-            this.btnvisa.Location = new System.Drawing.Point(203, 452);
+            this.btnvisa.Location = new System.Drawing.Point(203, 317);
             this.btnvisa.Name = "btnvisa";
             this.btnvisa.Size = new System.Drawing.Size(147, 76);
             this.btnvisa.TabIndex = 0;
@@ -300,7 +301,7 @@
             this.btnPay.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnPay.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btnPay.ForeColor = System.Drawing.Color.Red;
-            this.btnPay.Location = new System.Drawing.Point(32, 452);
+            this.btnPay.Location = new System.Drawing.Point(203, 235);
             this.btnPay.Name = "btnPay";
             this.btnPay.Size = new System.Drawing.Size(147, 76);
             this.btnPay.TabIndex = 0;
@@ -417,6 +418,7 @@
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel3.Controls.Add(this.btnvisa);
+            this.panel3.Controls.Add(this.btncancel);
             this.panel3.Controls.Add(this.btnClear);
             this.panel3.Controls.Add(this.button17);
             this.panel3.Controls.Add(this.button16);
@@ -470,6 +472,17 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(404, 565);
             this.panel1.TabIndex = 2;
+            // 
+            // btncancel
+            // 
+            this.btncancel.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btncancel.Location = new System.Drawing.Point(71, 427);
+            this.btncancel.Name = "btncancel";
+            this.btncancel.Size = new System.Drawing.Size(108, 42);
+            this.btncancel.TabIndex = 3;
+            this.btncancel.Text = "取消";
+            this.btncancel.UseVisualStyleBackColor = true;
+            this.btncancel.Click += new System.EventHandler(this.btncancel_Click);
             // 
             // a3FormPOS
             // 
@@ -525,5 +538,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label labelList;
         private System.Windows.Forms.Button btnClear;
+        private System.Windows.Forms.Button btncancel;
     }
 }

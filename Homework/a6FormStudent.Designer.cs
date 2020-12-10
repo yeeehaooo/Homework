@@ -30,7 +30,6 @@
         {
             this.labelresult = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.listsubject = new System.Windows.Forms.ListBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -39,9 +38,9 @@
             this.textdown = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnkeyIN = new System.Windows.Forms.Button();
-            this.btncount = new System.Windows.Forms.Button();
             this.btn20 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
+            this.butrmd = new System.Windows.Forms.Button();
             this.textenglish = new System.Windows.Forms.TextBox();
             this.btnsearch = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
@@ -50,6 +49,7 @@
             this.textchinese = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.textname = new System.Windows.Forms.TextBox();
+            this.btncount = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.dgv_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgv_chinese = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -59,7 +59,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.labelsingle = new System.Windows.Forms.Label();
             this.btnlie = new System.Windows.Forms.Button();
-            this.butrmd = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -69,7 +69,7 @@
             // 
             this.labelresult.AutoSize = true;
             this.labelresult.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.labelresult.Location = new System.Drawing.Point(278, 157);
+            this.labelresult.Location = new System.Drawing.Point(269, 145);
             this.labelresult.Name = "labelresult";
             this.labelresult.Size = new System.Drawing.Size(90, 21);
             this.labelresult.TabIndex = 17;
@@ -77,7 +77,7 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.listsubject);
+            this.groupBox2.Controls.Add(this.comboBox1);
             this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Controls.Add(this.label8);
             this.groupBox2.Controls.Add(this.label6);
@@ -87,31 +87,16 @@
             this.groupBox2.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.groupBox2.Location = new System.Drawing.Point(273, 12);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(240, 111);
+            this.groupBox2.Size = new System.Drawing.Size(240, 103);
             this.groupBox2.TabIndex = 16;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "搜尋";
-            // 
-            // listsubject
-            // 
-            this.listsubject.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.listsubject.FormattingEnabled = true;
-            this.listsubject.ItemHeight = 17;
-            this.listsubject.Items.AddRange(new object[] {
-            "國文",
-            "英文",
-            "數學"});
-            this.listsubject.Location = new System.Drawing.Point(9, 53);
-            this.listsubject.Name = "listsubject";
-            this.listsubject.Size = new System.Drawing.Size(98, 21);
-            this.listsubject.TabIndex = 11;
-            this.listsubject.SelectedIndexChanged += new System.EventHandler(this.listsubject_SelectedIndexChanged);
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("微軟正黑體", 10F, System.Drawing.FontStyle.Bold);
-            this.label7.Location = new System.Drawing.Point(116, 81);
+            this.label7.Location = new System.Drawing.Point(116, 73);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(22, 18);
             this.label7.TabIndex = 11;
@@ -121,7 +106,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("微軟正黑體", 10F, System.Drawing.FontStyle.Bold);
-            this.label8.Location = new System.Drawing.Point(6, 32);
+            this.label8.Location = new System.Drawing.Point(6, 24);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(50, 18);
             this.label8.TabIndex = 11;
@@ -131,7 +116,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("微軟正黑體", 10F, System.Drawing.FontStyle.Bold);
-            this.label6.Location = new System.Drawing.Point(52, 82);
+            this.label6.Location = new System.Drawing.Point(52, 74);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(18, 18);
             this.label6.TabIndex = 11;
@@ -140,7 +125,7 @@
             // btnsearch1
             // 
             this.btnsearch1.Font = new System.Drawing.Font("微軟正黑體", 10F);
-            this.btnsearch1.Location = new System.Drawing.Point(144, 78);
+            this.btnsearch1.Location = new System.Drawing.Point(144, 70);
             this.btnsearch1.Name = "btnsearch1";
             this.btnsearch1.Size = new System.Drawing.Size(79, 24);
             this.btnsearch1.TabIndex = 2;
@@ -151,7 +136,7 @@
             // textup
             // 
             this.textup.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.textup.Location = new System.Drawing.Point(73, 78);
+            this.textup.Location = new System.Drawing.Point(73, 70);
             this.textup.Name = "textup";
             this.textup.Size = new System.Drawing.Size(40, 25);
             this.textup.TabIndex = 0;
@@ -159,7 +144,7 @@
             // textdown
             // 
             this.textdown.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.textdown.Location = new System.Drawing.Point(9, 78);
+            this.textdown.Location = new System.Drawing.Point(9, 70);
             this.textdown.Name = "textdown";
             this.textdown.Size = new System.Drawing.Size(40, 25);
             this.textdown.TabIndex = 0;
@@ -197,17 +182,6 @@
             this.btnkeyIN.UseVisualStyleBackColor = true;
             this.btnkeyIN.Click += new System.EventHandler(this.btnkeyIN_Click);
             // 
-            // btncount
-            // 
-            this.btncount.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btncount.Location = new System.Drawing.Point(277, 129);
-            this.btncount.Name = "btncount";
-            this.btncount.Size = new System.Drawing.Size(75, 25);
-            this.btncount.TabIndex = 4;
-            this.btncount.Text = "統計";
-            this.btncount.UseVisualStyleBackColor = true;
-            this.btncount.Click += new System.EventHandler(this.btncount_Click);
-            // 
             // btn20
             // 
             this.btn20.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
@@ -228,6 +202,17 @@
             this.label5.Size = new System.Drawing.Size(42, 21);
             this.label5.TabIndex = 3;
             this.label5.Text = "英文";
+            // 
+            // butrmd
+            // 
+            this.butrmd.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.butrmd.Location = new System.Drawing.Point(121, 177);
+            this.butrmd.Name = "butrmd";
+            this.butrmd.Size = new System.Drawing.Size(118, 25);
+            this.butrmd.TabIndex = 4;
+            this.butrmd.Text = "隨機輸入20筆";
+            this.butrmd.UseVisualStyleBackColor = true;
+            this.butrmd.Click += new System.EventHandler(this.butrmd_Click);
             // 
             // textenglish
             // 
@@ -301,6 +286,17 @@
             this.textname.Name = "textname";
             this.textname.Size = new System.Drawing.Size(100, 29);
             this.textname.TabIndex = 2;
+            // 
+            // btncount
+            // 
+            this.btncount.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btncount.Location = new System.Drawing.Point(282, 117);
+            this.btncount.Name = "btncount";
+            this.btncount.Size = new System.Drawing.Size(75, 25);
+            this.btncount.TabIndex = 4;
+            this.btncount.Text = "統計";
+            this.btncount.UseVisualStyleBackColor = true;
+            this.btncount.Click += new System.EventHandler(this.btncount_Click);
             // 
             // dataGridView1
             // 
@@ -384,22 +380,24 @@
             this.btnlie.UseVisualStyleBackColor = true;
             this.btnlie.Click += new System.EventHandler(this.btnlie_Click);
             // 
-            // butrmd
+            // comboBox1
             // 
-            this.butrmd.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.butrmd.Location = new System.Drawing.Point(121, 177);
-            this.butrmd.Name = "butrmd";
-            this.butrmd.Size = new System.Drawing.Size(118, 25);
-            this.butrmd.TabIndex = 4;
-            this.butrmd.Text = "隨機輸入20筆";
-            this.butrmd.UseVisualStyleBackColor = true;
-            this.butrmd.Click += new System.EventHandler(this.butrmd_Click);
+            this.comboBox1.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "國文",
+            "英文",
+            "數學"});
+            this.comboBox1.Location = new System.Drawing.Point(9, 43);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(104, 24);
+            this.comboBox1.TabIndex = 19;
             // 
             // a6FormStudent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1080, 678);
+            this.ClientSize = new System.Drawing.Size(1080, 677);
             this.Controls.Add(this.btnlie);
             this.Controls.Add(this.btncount);
             this.Controls.Add(this.labelsingle);
@@ -410,6 +408,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Name = "a6FormStudent";
             this.Text = "#129成績單";
+            this.Load += new System.EventHandler(this.a6FormStudent_Load);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
@@ -449,10 +448,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dgv_english;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgv_math;
         private System.Windows.Forms.DataGridViewButtonColumn dvg_del;
-        public System.Windows.Forms.ListBox listsubject;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label labelsingle;
         private System.Windows.Forms.Button btnlie;
         private System.Windows.Forms.Button butrmd;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }

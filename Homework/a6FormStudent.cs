@@ -48,18 +48,18 @@ namespace Homework
         }
 
         BindingList<a6StuCls> studentlist = new BindingList<a6StuCls>();
-
+        
         private void StudentForm_Load(object sender, EventArgs e) //LISTBOX 
         {
-            listsubject.Items.AddRange(new object[]
-                           {
-                    new SUBJECTListItem("國文"),
-                    new SUBJECTListItem("英文"),
-                    new SUBJECTListItem("數學")
-                           });
+            
+        }
+        private void a6FormStudent_Load(object sender, EventArgs e)
+        {
+            
             dataGridView1.AutoGenerateColumns = true;
             //dataGridView1.EditMode = DataGridViewEditMode.EditOnEnter;
             //dataGridView1.DataSource = studentlist;
+          
         }
         public class SUBJECTListItem   //LISTBOX
         {
@@ -202,7 +202,7 @@ namespace Homework
         {
             
             
-            for (int i = 0; i <=20; i++)
+            for (int i = 0; i <20; i++)
             {
                 int x = random.Next(0, 100);
                 int y = random.Next(0, 100);
@@ -231,25 +231,7 @@ namespace Homework
                 dataGridView1.Rows.RemoveAt(row.Index);
         }//todo 選取列刪除學生資料
         
-        public int lbx; //todo Listbox選取索引
-        private void listsubject_SelectedIndexChanged(object sender, EventArgs e)//Listbox選取索引
-        {
-            if (listsubject.SelectedIndex == 0)
-            {
-                //MessageBox.Show("國文", "選取科目");
-                lbx = 0;
-            }
-            else if (listsubject.SelectedIndex == 1)
-            {
-                //MessageBox.Show("英文", "選取科目");
-                lbx = 1;
-            }
-            else if (listsubject.SelectedIndex == 2)
-            {
-                //MessageBox.Show("數學", "選取科目");
-                lbx = 2;
-            }
-        }
+
         private void btnsearch1_Click(object sender, EventArgs e)  //todo 依科目搜尋X~X範圍學生成績
         {
             double z;
@@ -273,9 +255,9 @@ namespace Homework
             labelresult.Text = string.Empty;
             string zz = "";
             int cou = 0;
-            switch (lbx)
+            switch (comboBox1.Text)
             {
-                case 0:
+                case "國文":
                     for (int i = 0; i < studentlist.Count; i++)
                     {
                         if (studentlist[i].stuChinese >= lbdown && studentlist[i].stuChinese <= lbup)
@@ -289,7 +271,7 @@ namespace Homework
                         }
                     }
                     break;
-                case 1:
+                case "英文":
                     for (int i = 0; i < studentlist.Count; i++)
                     {
                         if (studentlist[i].stuEnglish >= lbdown && studentlist[i].stuEnglish <= lbup)
@@ -303,7 +285,7 @@ namespace Homework
                         }
                     }
                     break;
-                case 2:
+                case "數學":
                     for (int i = 0; i < studentlist.Count; i++)
                     {
                         if (studentlist[i].stuMath >= lbdown && studentlist[i].stuMath <= lbup)
@@ -325,11 +307,14 @@ namespace Homework
             DialogResult result;
             result = MessageBox.Show("資料匯出", "確定",MessageBoxButtons.OKCancel,MessageBoxIcon.Warning);
             if (result == DialogResult.OK)
-                MessageBox.Show("這是MessageBox練習","騙你的~");
+                MessageBox.Show("需下載正版Office，請點選 '是' 移動至下載頁面。", "騙你的~",MessageBoxButtons.YesNo,MessageBoxIcon.Error);
             else
-                MessageBox.Show("BINGO答對了");
+                MessageBox.Show("缺少Excel組件，需安裝Office", "這只是MessageBox練習喔");
         }
         double avgch, avgen, avgma;
+
+  
+
         int ch1, eng1, ma1;
         private void btncount_Click(object sender, EventArgs e) //todo各科平均、不及格人數
         {
@@ -384,6 +369,7 @@ namespace Homework
                                 $"數學最高分：{maxma}分";
         }
     }
+
 }
 
 

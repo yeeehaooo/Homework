@@ -17,16 +17,21 @@ namespace Homework
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new a0FormIndex());
-            //Application.Run(new a1FormHello());
-            //Application.Run(new a2FormLoan());
-            //Application.Run(new a3FormPOS());
-            //Application.Run(new a4FormGuess());
-            //Application.Run(new a5FormScreen());
-            //Application.Run(new a6FormStudent());  
-            //Application.Run(new a7FormMath());
-            //Application.Run(new a8FormCalc());
-           
+            Application.Run(new a0FormIndex());  //OK
+            //Application.Run(new a1FormHello());  //OK
+            //Application.Run(new a2FormLoan());   //OK
+            //Application.Run(new a3FormPOS());    //OK
+            //Application.Run(new a4FormGuess());  //OK
+            //Application.Run(new a5FormScreen());  //XXXX
+            //Application.Run(new a6FormStudent()); //OK 
+            //Application.Run(new a7FormMath());    //OK
+            //Application.Run(new a9FormOOXX());   //OK
+            //Application.Run(new FormSignIn99()); //OK
+            //Application.Run(new FormNote());      //OK
+            //Application.Run(new FormClock());     //OK
+            //Application.Run(new a8FormCalc1());   // 90%
+            //Application.Run(new FormPainter()); //XXXX
+            //Application.Run(new FormPicture());
         }
     }
 }

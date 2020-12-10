@@ -33,6 +33,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -116,12 +118,55 @@
     <Compile Include="a8FormCalc.Designer.cs">
       <DependentUpon>a8FormCalc.cs</DependentUpon>
     </Compile>
+    <Compile Include="a8FormCalc1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="a8FormCalc1.Designer.cs">
+      <DependentUpon>a8FormCalc1.cs</DependentUpon>
+    </Compile>
     <Compile Include="a9FormOOXX.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="a9FormOOXX.Designer.cs">
       <DependentUpon>a9FormOOXX.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormClock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormClock.Designer.cs">
+      <DependentUpon>FormClock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormNote.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormNote.Designer.cs">
+      <DependentUpon>FormNote.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPainter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPainter.Designer.cs">
+      <DependentUpon>FormPainter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPicture.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPicture.Designer.cs">
+      <DependentUpon>FormPicture.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormRead99.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormRead99.Designer.cs">
+      <DependentUpon>FormRead99.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSignIn99.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSignIn99.Designer.cs">
+      <DependentUpon>FormSignIn99.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Member.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="a0FormIndex.resx">
@@ -151,8 +196,29 @@
     <EmbeddedResource Include="a8FormCalc.resx">
       <DependentUpon>a8FormCalc.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="a8FormCalc1.resx">
+      <DependentUpon>a8FormCalc1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="a9FormOOXX.resx">
       <DependentUpon>a9FormOOXX.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormClock.resx">
+      <DependentUpon>FormClock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormNote.resx">
+      <DependentUpon>FormNote.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPainter.resx">
+      <DependentUpon>FormPainter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPicture.resx">
+      <DependentUpon>FormPicture.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormRead99.resx">
+      <DependentUpon>FormRead99.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSignIn99.resx">
+      <DependentUpon>FormSignIn99.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

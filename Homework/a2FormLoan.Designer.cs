@@ -175,7 +175,7 @@
             this.textallloan.Location = new System.Drawing.Point(209, 186);
             this.textallloan.Name = "textallloan";
             this.textallloan.Size = new System.Drawing.Size(184, 22);
-            this.textallloan.TabIndex = 3;
+            this.textallloan.TabIndex = 99;
             // 
             // a2FormLoan
             // 

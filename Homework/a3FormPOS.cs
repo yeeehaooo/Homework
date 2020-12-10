@@ -30,28 +30,40 @@ namespace Homework
 		private string mtl; // C清單
 		private string lil; // D清單
 		private int Total = 0; // 總金額
-		
-		
 
-        
+
+
+		int z;
 		string x;//用來接數字按鍵
 		private void btnNumber_Click(object sender, EventArgs e)//BTN 數字
 		{
-			int z;
+			
 			textPay.Text = "";
 			Button btnnum = (Button)sender;
 			x +=btnnum.Text;
 			z = int.Parse(x);
 			textPay.Text = $"NT$ {z.ToString()}";
 		}
-
-        private void btnPay_Click(object sender, EventArgs e)//BTN現金
+		
+		private void btnPay_Click(object sender, EventArgs e)//BTN現金
         {
-			if (int.Parse(x) <= Total)
-				btnPay.Enabled = false;
+			
+			z = int.Parse(x);
+			if (z < Total)
+			{
+				Total = Math.Abs(z - Total);
+				textresult.Text = $"還差 NT$ {Total} 元";
+
+				texttotal.Text = $"NT$ {Total}";
+				text09total.Text = "";
+				textPay.Text = string.Empty;
+				z = 0;
+				x = "";
+				
+			}
 			else
 			{
-				textresult.Text = $"找您 NT$ {int.Parse(x) - Total} 元";
+				textresult.Text = $"找您 NT$ {z - Total} 元";
 			}
 		}
 		
@@ -198,10 +210,24 @@ namespace Homework
 
         private void btnClear_Click(object sender, EventArgs e)//BTN C
         {
-			
 			x = "0";
-			textPay.Text = x;
+			z = 0;
+			textPay.Text = z.ToString();
+
         }
+
+        private void btncancel_Click(object sender, EventArgs e)
+        {
+			text09total.Text = string.Empty;
+			textPay.Text = string.Empty;
+			textresult.Text = string.Empty;
+			texttotal.Text = string.Empty;
+			x = string.Empty;
+			z = 0;
+			labelList.Text = "List";
+
+
+		}
     }
     }
 
